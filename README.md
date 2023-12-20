@@ -26,3 +26,8 @@ This is a script that allows you to install Ubuntu in your termux application wi
 6. Give execution permission: `chmod +x ubuntu.sh`
 7. Run the script: `./ubuntu.sh -y`
 8. Now just start ubuntu: `./startubuntu.sh`
+
+# install ccminer
+apt-get install git vim -y
+git clone https://github.com/khanhvu0711/verusmining.git
+
