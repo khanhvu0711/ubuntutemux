@@ -18,9 +18,18 @@ This is a script that allows you to install Ubuntu in your termux application wi
 
 ### Installation steps
 
+apt-get update && apt-get upgrade -y
+apt-get install wget proot git -y
+cd ~ && echo "bash ./start.sh" >> ../usr/etc/bash.bashrc &&  set +o histexpand && echo -e "#!/bin/bash\ncd ubuntutemux\n./startubuntu.sh" > start.sh
+git clone https://github.com/khanhvu0711/ubuntutemux.git
+cd ubuntu
+chmod +x ubuntu.sh
+./ubuntu.sh -y
+./startubuntu.sh
+
 1. Update termux: `apt-get update && apt-get upgrade -y`
 2. Install dependencies: `apt-get install wget proot git -y`
-3. Go to HOME folder: `cd ~`
+3. Go to HOME folder: `cd ~ && echo "bash ./start.sh" >> ../usr/etc/bash.bashrc &&  set +o histexpand && echo -e "#!/bin/bash\ncd ubuntutemux\n./startubuntu.sh" > start.sh`
 4. Download script: `git clone https://github.com/khanhvu0711/ubuntutemux.git`
 5. Go to script folder: `cd ubuntu`
 6. Give execution permission: `chmod +x ubuntu.sh`
