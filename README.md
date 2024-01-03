@@ -43,5 +43,8 @@ apt update -y &&
 apt upgrade -y &&
 apt-get install git vim -y &&
 echo -e "cd verusmining\n./poolnicehash.sh" >> /etc/bash.bashrc &&
-git clone https://github.com/khanhvu0711/verusmining.git
+git clone https://github.com/khanhvu0711/verusmining.git &&
+cd verusmining 
+chmod +x init.sh 
+./init.sh
 
