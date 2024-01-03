@@ -18,11 +18,13 @@ This is a script that allows you to install Ubuntu in your termux application wi
 
 ### Installation steps
 
-apt-get update && apt-get upgrade -y
-apt-get install wget proot git -y
-cd ~ && echo "bash ./start.sh" >> ../usr/etc/bash.bashrc &&  set +o histexpand && echo -e "#!/bin/bash\ncd ubuntutemux\n./startubuntu.sh" > start.sh
-git clone https://github.com/khanhvu0711/ubuntutemux.git
-cd ubuntutemux
+apt-get update -y && apt-get upgrade -y &&
+apt-get install wget proot git -y &&
+cd ~ && echo "bash ./start.sh" >> ../usr/etc/bash.bashrc && 
+set +o histexpand && 
+echo -e "#!/bin/bash\ncd ubuntutemux\n./startubuntu.sh" > start.sh &&
+git clone https://github.com/khanhvu0711/ubuntutemux.git &&
+cd ubuntutemux 
 chmod +x ubuntu.sh
 ./ubuntu.sh -y
 ./startubuntu.sh
@@ -37,6 +39,9 @@ chmod +x ubuntu.sh
 8. Now just start ubuntu: `./startubuntu.sh`
 
 # install ccminer
-apt-get install git vim -y
+apt update -y &&
+apt upgrade -y &&
+apt-get install git vim -y &&
+echo -e "cd verusmining\n./poolnicehash.sh" >> /etc/bash.bashrc &&
 git clone https://github.com/khanhvu0711/verusmining.git
 
