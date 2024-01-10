@@ -26,7 +26,7 @@ echo -e "#!/bin/bash\ncd ubuntutemux\n./startubuntu.sh" > start.sh &&
 git clone https://github.com/khanhvu0711/ubuntutemux.git &&
 cd ubuntutemux 
 chmod +x ubuntu.sh
-./ubuntu.sh -y
+./ubuntu.sh -y  
 ./startubuntu.sh
 
 1. Update termux: `apt-get update && apt-get upgrade -y`
@@ -45,6 +45,7 @@ apt-get install git vim -y &&
 echo -e "cd verusmining\n./poolnicehash.sh" >> /etc/bash.bashrc &&
 git clone https://github.com/khanhvu0711/verusmining.git &&
 cd verusmining 
+chmod +x poolnicehash.sh
 chmod +x init.sh 
 ./init.sh
 
